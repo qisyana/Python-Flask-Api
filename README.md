@@ -15,7 +15,7 @@ https://localhost:8080/api/lirik?search=Alan Walker
 # Response
 ```
 {
-    "results": 	"Today is gonna be the day That they're gonna throw it back to you By now you should've somehow Realized what you gotta do I don't believe that anybody Feels the way I do, about you nowBack beat, the word was on the street That the fire in your heart is out I'm sure you've heard it all before But you never really had a doubt I don't believe that anybody Feels the way I do about you nowAnd all the roads we have to walk are winding And all the lights that lead us there are blinding There are many things that I Would like to say to you but I don't know howBecause maybe, you're gonna be the one that saves me And after all, you're my wonderwallToday was gonna be the day But they'll never throw it back to you By now you should've somehow Realized what you're not to do I don't believe that anybody Feels the way I do, about you nowAnd all the roads that lead you there are winding And all the lights that light the way are blinding There are many things that I Would like to say to you but I don't know howI said maybe, you're gonna be the one that saves me And after all, you're my wonderwallI said maybe, you're gonna be the one that saves me And after all, you're my wonderwallI said maybe, you're gonna be the one that saves me You're gonna be the one that saves me You're gonna be the one that saves me"
+    "results": "\n(feat. K-391 & Emelie Hollow)\n\r\n[Verse 1: Emelie Hollow]\r\nLily was a little girl\r\nAfraid of the big, wide world\r\nShe grew up within her castle walls\r\nNow and then she tried to run\r\nAnd then on the night with the setting sun\r\nShe went in the woods away\r\nSo afraid, all alone\n\r\n[Pre-Chorus: Emelie Hollow]\r\nThey warned her, don\u2019t go there\r\nThere's creatures who are hiding in the dark\r\nThen something came creeping\r\nIt told her, don\u2019t you worry just\n\r\n[Chorus: Emelie Hollow]\r\nFollow everywhere I go\r\nTop over the mountains of valley low\r\nGive you everything you\u2019ve been dreaming of\r\nJust let me in, ooh\r\nEverything you watch and go\r\nThat'll be the magic story you\u2019ve been told\r\nAnd you\u2019ll be safe under my control\r\nJust let me in, ooh\r\nJust let me in, ooh\n\r\n[Verse 2: Emelie Hollow]\r\nShe knew she was hypnotized\r\nAnd walking on cold thin ice\r\nThen it broke, and she awoke again\r\nThen she ran faster and\r\nStarted screaming, is there someone out there?\r\nPlease help me\r\nCome get me\r\nBehind her, she can hear it say\n\r\n[Chorus: Emelie Hollow]\r\nFollow everywhere I go\r\nTop over the mountains of valley low\r\nGive you everything you\u2019ve been dreaming of\r\nJust let me in, ooh\r\nEverything you watch and go\r\nThat'll be the magic story you\u2019ve been told\r\nAnd you\u2019ll be safe under my control\r\nJust let me in, ooh\r\nJust let me in, ooh\n\r\n[Bridge: Emelie Hollow]\r\nOoh, ooh, ooh, ooh\r\nEverything you wanted gotta be the magic story you\u2019ve been told\r\nAnd you\u2019ll be safe under my control\r\nJust let me in, ooh\n\r\n[Outro: Emelie Hollow]\r\nFollow everywhere I go\r\nTop over the mountains of valley low\r\nGive you everything you\u2019ve been dreaming of\r\nJust let me in, ooh\r\nThen she ran faster and\r\nStarted screaming, is there someone out there?\r\nPlease help me\r\nJust let me in, ooh"
 }
 ```
 
@@ -25,9 +25,7 @@ https://localhost:8080/api/random/quotes
 ```
 # Response 
 ```
-{
-    "results": https://static.xx.fbcdn.net/rsrc.php/v3/yt/l/0,cross/sHzueLzk5lu.css?_nc_x=Ij3Wp8lg5Kz
-}
+    {"author":"George W.","quotes":"Harapan tak pernah meninggalkan kita, kita yang meninggalkan harapan.","status":200}
 ```
 
 # Info Gempa
@@ -36,9 +34,7 @@ https://localhost:8080/api/infogempa
 ```
 # Response 
 ```
-{
-    "results": https://static.xx.fbcdn.net/rsrc.php/v3/yt/l/0,cross/sHzueLzk5lu.css?_nc_x=Ij3Wp8lg5Kz
-}
+    {"kedalaman":"10 km","koordinat":"5.63 LS - 101.60 BT","lokasi":"Pusat gempa berada di laut 80 km BaratDaya Enggano","magnitude":"6.5","map":"https://ews.bmkg.go.id/tews/data/20210210195227.mmi.jpg","potensi":"Dirasakan (Skala MMI): II-III Enggano, II Kota Bengkulu, II Kepahiang","status":200,"waktu":"10 Feb 2021, 19:52 WIB"}
 ```
 
 # Stalk Instagram
