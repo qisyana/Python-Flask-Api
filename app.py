@@ -79,5 +79,29 @@ def stalk():
 			'msg': '[!] Masukkan parameter username'
 		}
 
+@app.route('/api/chord', methods=['GET','POST'])
+def chord():
+	if request.args.get('q'):
+		try:
+			q = request.args.get('q').replace(' ','+')
+			id = get('http://app.chordindonesia.com/?json=get_search_results&exclude=date,modified,attachments,comment_count,comment_status,thumbnail,thumbnail_images,author,excerpt,content,categories,tags,comments,custom_fields&search=%s' % q).json()['posts'][0]['id']
+			chord = get('http://app.chordindonesia.com/?json=get_post&id=%s' % id).json()
+			result = html_text.parse_html(chord['post']['content']).text_content()
+			return {
+				'status': 200,
+				'result': result
+			}
+		except Exception as e:
+			print(e)
+			return {
+				'status': False,
+				'error': '[❗] Maaf chord yang anda cari tidak dapat saya temukan!'
+			}
+	else:
+		return {
+			'status': False,
+			'msg': '[!] Masukkan parameter q'
+		}
+
 if __name__ == '__main__':
     app.run()
