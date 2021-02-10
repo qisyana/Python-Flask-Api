@@ -3,6 +3,7 @@
 - Lirik Lagu
 - Random Quotes
 - Info Gempa
+- Stalk Instagram
 
 
 # Cara Penggunaan
@@ -40,6 +41,17 @@ https://localhost:8080/api/infogempa
 }
 ```
 
-# Demo
+# Stalk Instagram
+```
+https://localhost:8080/api/ig/stalk?username=ekooju
+```
+# Response 
+```
+{
+    "results": https://static.xx.fbcdn.net/rsrc.php/v3/yt/l/0,cross/sHzueLzk5lu.css?_nc_x=Ij3Wp8lg5Kz
+}
+```
+
+# Live API
 * https://python-api-zhirrr.herokuapp.com/
 - Gunakan Parameter Yg Sama Yak :)
