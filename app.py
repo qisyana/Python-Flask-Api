@@ -1,5 +1,5 @@
 from flask import Flask, request
-import requests
+from requests import get, post
 from bs4 import BeautifulSoup as bs
 import json, base64
 
