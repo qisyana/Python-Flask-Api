@@ -1,6 +1,7 @@
 ## 🛠️ Python-Flask-Api
 
-- Lirik Lagu
+- Search Lirik Lagu
+- Search Chord Lagu
 - Random Quotes
 - Info Gempa
 - Stalk Instagram
@@ -8,9 +9,20 @@
 
 # Cara Penggunaan
 
-# Lirik Lagu
+# Search Lirik Lagu
 ```
 https://localhost:8080/api/lirik?search=Alan Walker
+```
+# Response
+```
+{
+    "results": "\n(feat. K-391 & Emelie Hollow)\n\r\n[Verse 1: Emelie Hollow]\r\nLily was a little girl\r\nAfraid of the big, wide world\r\nShe grew up within her castle walls\r\nNow and then she tried to run\r\nAnd then on the night with the setting sun\r\nShe went in the woods away\r\nSo afraid, all alone\n\r\n[Pre-Chorus: Emelie Hollow]\r\nThey warned her, don\u2019t go there\r\nThere's creatures who are hiding in the dark\r\nThen something came creeping\r\nIt told her, don\u2019t you worry just\n\r\n[Chorus: Emelie Hollow]\r\nFollow everywhere I go\r\nTop over the mountains of valley low\r\nGive you everything you\u2019ve been dreaming of\r\nJust let me in, ooh\r\nEverything you watch and go\r\nThat'll be the magic story you\u2019ve been told\r\nAnd you\u2019ll be safe under my control\r\nJust let me in, ooh\r\nJust let me in, ooh\n\r\n[Verse 2: Emelie Hollow]\r\nShe knew she was hypnotized\r\nAnd walking on cold thin ice\r\nThen it broke, and she awoke again\r\nThen she ran faster and\r\nStarted screaming, is there someone out there?\r\nPlease help me\r\nCome get me\r\nBehind her, she can hear it say\n\r\n[Chorus: Emelie Hollow]\r\nFollow everywhere I go\r\nTop over the mountains of valley low\r\nGive you everything you\u2019ve been dreaming of\r\nJust let me in, ooh\r\nEverything you watch and go\r\nThat'll be the magic story you\u2019ve been told\r\nAnd you\u2019ll be safe under my control\r\nJust let me in, ooh\r\nJust let me in, ooh\n\r\n[Bridge: Emelie Hollow]\r\nOoh, ooh, ooh, ooh\r\nEverything you wanted gotta be the magic story you\u2019ve been told\r\nAnd you\u2019ll be safe under my control\r\nJust let me in, ooh\n\r\n[Outro: Emelie Hollow]\r\nFollow everywhere I go\r\nTop over the mountains of valley low\r\nGive you everything you\u2019ve been dreaming of\r\nJust let me in, ooh\r\nThen she ran faster and\r\nStarted screaming, is there someone out there?\r\nPlease help me\r\nJust let me in, ooh"
+}
+```
+
+# Search Chord Lagu
+```
+https://localhost:8080/api/chord?q=alone
 ```
 # Response
 ```
