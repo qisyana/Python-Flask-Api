@@ -1,7 +1,7 @@
 from flask import Flask, request
 from requests import get, post
 from bs4 import BeautifulSoup as bs
-import json, base64
+import json, base64, random
 
 app = Flask(__name__)
 
@@ -71,6 +71,16 @@ def lirik():
     }
     return b
 
+@app.route('/v1/randomquotes', methods=['GET','POST'])
+def quotes():
+	quotes_file = json.loads(open('quotes.json').read())
+	result = random.choice(quotes_file)
+	print(result)
+	return {
+		'status': 200,
+		'author': result['author'],
+		'quotes': result['quotes']
+	}
 
 if __name__ == '__main__':
     app.run()
