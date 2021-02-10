@@ -24,7 +24,7 @@ def fb():
     }
     return js
 
-@app.route('/nulis', methods=['GET'])
+@app.route('/nulis', methods=['GET', 'POST'])
 def tulis():
     from nulis import tulis
     text = request.args.get('text')
