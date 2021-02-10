@@ -52,7 +52,6 @@ def infogempa():
 @app.route('api/ig/stalk', methods=['GET','POST'])
 def stalk():
 	if request.args.get('username'):
-		try:
 			username = request.args.get('username').replace('@','')
 			igestalk = bs(get('https://www.mystalk.net/profile/%s' % username, headers={'User-Agent':'Mozilla/5.0 (Linux; Android 8.1.0; CPH1909) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.101 Mobile Safari/537.36'}).text, 'html.parser').find('div', class_='user-profile-area')
 			igestalk_ = igestalk.findAll('span')
@@ -82,7 +81,6 @@ def stalk():
 @app.route('/api/chord', methods=['GET','POST'])
 def chord():
 	if request.args.get('q'):
-		try:
 			q = request.args.get('q').replace(' ','+')
 			id = get('http://app.chordindonesia.com/?json=get_search_results&exclude=date,modified,attachments,comment_count,comment_status,thumbnail,thumbnail_images,author,excerpt,content,categories,tags,comments,custom_fields&search=%s' % q).json()['posts'][0]['id']
 			chord = get('http://app.chordindonesia.com/?json=get_post&id=%s' % id).json()
@@ -90,13 +88,13 @@ def chord():
 			return {
 				'status': 200,
 				'result': result
-			}
+                               }
 		except Exception as e:
 			print(e)
 			return {
 				'status': False,
-				'error': '[❗] Maaf chord yang anda cari tidak dapat saya temukan!'
-			}
+				'error': '[❗] Maaf chord yang anda cari tidak dapat saya temukan'
+                               }
 	else:
 		return {
 			'status': False,
