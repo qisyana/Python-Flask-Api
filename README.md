@@ -1,16 +1,15 @@
-## ✨ Simple Flask App
+## 🛠️ Python-Flask-Api
 
 - Lirik Lagu
-- Get Facebook Video Direct Url
-- Get Instagram Video Direct Url
-- Nulis Dibuku
+- Random Quotes
+- Info Gempa
 
 
 # Cara Penggunaan
 
 # Lirik Lagu
 ```
-https://localhost:8080/lirik?artis=oasis&judul=wonderwall
+https://localhost:8080/api/lirik?search=Alan Walker
 ```
 # Response
 ```
@@ -19,19 +18,20 @@ https://localhost:8080/lirik?artis=oasis&judul=wonderwall
 }
 ```
 
-# Nulis Bot
+# Random Quotes
 ```
-https://localhost:8080/nulis?=text=rezzaapr
+https://localhost:8080/api/random/quotes
 ```
 # Response 
 ```
 {
-    "results": https://i.ibb.co/k0kbrWx/nulis.jpg
+    "results": https://static.xx.fbcdn.net/rsrc.php/v3/yt/l/0,cross/sHzueLzk5lu.css?_nc_x=Ij3Wp8lg5Kz
 }
 ```
-# Facebook 
+
+# Info Gempa
 ```
-https://localhost:8080/fb?url=url video
+https://localhost:8080/api/infogempa
 ```
 # Response 
 ```
@@ -41,5 +41,5 @@ https://localhost:8080/fb?url=url video
 ```
 
 # Demo
-* https://api-rezzaapr.herokuapp.com/
-- Gunakan Parameter Yang Sama Seperti Diatas
+* https://python-api-zhirrr.herokuapp.com/
+- Gunakan Parameter Yg Sama Yak :)
