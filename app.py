@@ -36,7 +36,7 @@ def tulis():
         image_64_encode = base64.encodebytes(image_read)
         url = 'https://api.imgbb.com/1/upload'
         par = {
-         'key':'b76b9a5f05dafad41987044532b9e400',
+         'key':'bfb879871c22df49a0694b4fb9ef6f9d',
          'image':image_64_encode,
          'name':'nulis',
          'expiration': 60
