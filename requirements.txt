@@ -1,6 +1,7 @@
 Flask==1.1.1
 requests==2.23.0
 gunicorn==20.0.4
+html-text==0.5.2
 googletrans
 google
 bs4
