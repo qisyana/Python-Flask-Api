@@ -55,4 +55,4 @@
 
 * [`Rezzaapr`](https://github.com/rezzaapr)
 
-Makasih Modul Nya Lirik Nya Ngab :)
+Makasih Modul Lirik Nya Ngab :)
