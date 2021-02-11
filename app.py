@@ -9,7 +9,7 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     a = {
-    'Contoh-Penggunaan':{'search-lirik': 'api/lirik?search=alone', 'random-quotes':'api/random/quotes', 'info-gempa':'api/infogempa', 'stalk-ig':'api/ig/stalk?username=ekooju'}
+    'Contoh-Penggunaan':{'search-lirik': 'api/lirik?search=alone', 'random-quotes':'api/random/quotes', 'info-gempa':'api/infogempa', 'random-asmaulhusna':'api/random/asmaulhusna'}
     }
     return a
 
@@ -32,6 +32,20 @@ def quotes():
 		'status': 200,
 		'author': result['author'],
 		'quotes': result['quotes']
+	}
+
+@app.route('/api/random/asmaulhusna', methods=['GET','POST'])
+def quotes():
+	quotes_file = json.loads(open('asmaul.json').read())
+	result = random.choice(quotes_file)
+	print(result)
+	return {
+		'status': 200,
+		'no': result['index'],
+		'latin': result['latin'],
+                'arabic': result['arabic'],
+                'translate_id': result['translation_id'],
+                'translate_en': result['translation_en']
 	}
 
 @app.route('/api/infogempa', methods=['GET','POST'])
