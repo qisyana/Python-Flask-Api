@@ -15,9 +15,9 @@ def home():
 
 @app.route('/api/lirik')
 def lirik():
-    url= request.args.get('search')
+    par= request.args.get('search')
     from lirik import search
-    a = search(url)
+    a = search(par)
     b = {
     'results': a.result()
     }
@@ -25,8 +25,8 @@ def lirik():
 
 @app.route('/api/random/quotes', methods=['GET','POST'])
 def quotes():
-	quott = json.loads(open('quotes.json').read())
-	result = random.choice(quott)
+	quote = json.loads(open('quotes.json').read())
+	result = random.choice(quote)
 	print(result)
 	return {
 		'status': 200,
@@ -50,26 +50,26 @@ def quotes():
 
 @app.route('/api/infogempa', methods=['GET','POST'])
 def infogempa():
-	hehe = bs(get('https://www.bmkg.go.id/').text, 'html.parser').find('div', class_="col-md-4 md-margin-bottom-10")
-	anjay = hehe.findAll('li')
+	be = bs(get('https://www.bmkg.go.id/').text, 'html.parser').find('div', class_="col-md-4 md-margin-bottom-10")
+	em = be.findAll('li')
 	gambar = hehe.find('a')['href']
 	return {
 		'status': 200,
 		'map': gambar,
-		'waktu': anjay[0].text,
-		'magnitude': anjay[1].text,
-		'kedalaman': anjay[2].text,
-		'koordinat': anjay[3].text,
-		'lokasi': anjay[4].text,
-		'potensi': anjay[5].text
+		'waktu': em[0].text,
+		'magnitude': em[1].text,
+		'kedalaman': em[2].text,
+		'koordinat': em[3].text,
+		'lokasi': em[4].text,
+		'potensi': em[5].text
 	}
 
 @app.route('/api/chord', methods=['GET','POST'])
 def chord():
-	if request.args.get('lagu'):
+	if request.args.get('q'):
 		try:
-			lagu = request.args.get('lagu').replace(' ','+')
-			id = get('http://app.chordindonesia.com/?json=get_search_results&exclude=date,modified,attachments,comment_count,comment_status,thumbnail,thumbnail_images,author,excerpt,content,categories,tags,comments,custom_fields&search=%s' % lagu).json()['posts'][0]['id']
+			q = request.args.get('q').replace(' ','+')
+			id = get('http://app.chordindonesia.com/?json=get_search_results&exclude=date,modified,attachments,comment_count,comment_status,thumbnail,thumbnail_images,author,excerpt,content,categories,tags,comments,custom_fields&search=%s' % q).json()['posts'][0]['id']
 			chord = get('http://app.chordindonesia.com/?json=get_post&id=%s' % id).json()
 			result = html_text.parse_html(chord['post']['content']).text_content()
 			return {
