@@ -52,7 +52,7 @@ def quotes():
 def infogempa():
 	be = bs(get('https://www.bmkg.go.id/').text, 'html.parser').find('div', class_="col-md-4 md-margin-bottom-10")
 	em = be.findAll('li')
-	gambar = hehe.find('a')['href']
+	gambar = be.find('a')['href']
 	return {
 		'status': 200,
 		'map': gambar,
@@ -80,12 +80,12 @@ def chord():
 			print(e)
 			return {
 				'status': False,
-				'error': '[❗] Maaf chord lagu yang anda cari tidak ditemukan!'
+				'error': '[❗] Maaf chord yang anda cari tidak dapat saya temukan!'
 			}
 	else:
 		return {
 			'status': False,
-			'msg': '[!] Masukkan parameter lagu'
+			'msg': '[!] Masukkan parameter q'
 		}
 
 if __name__ == '__main__':
