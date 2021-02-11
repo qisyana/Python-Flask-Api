@@ -52,10 +52,10 @@ def quotes():
 def infogempa():
 	be = bs(get('https://www.bmkg.go.id/').text, 'html.parser').find('div', class_="col-md-4 md-margin-bottom-10")
 	em = be.findAll('li')
-	gambar = be.find('a')['href']
+	img = be.find('a')['href']
 	return {
 		'status': 200,
-		'map': gambar,
+		'map': img,
 		'waktu': em[0].text,
 		'magnitude': em[1].text,
 		'kedalaman': em[2].text,
