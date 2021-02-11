@@ -59,3 +59,9 @@ https://localhost:8080/api/infogempa
 # Live API
 * https://python-api-zhirrr.herokuapp.com/
 - Gunakan Parameter Yg Sama Yak :)
+
+## 🙏 Big Special Thanks To
+
+* [`Rezzaapr`](https://github.com/rezzaapr)
+
+Makasih Modul Nya Lirik Nya Ngab :)
