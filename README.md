@@ -3,8 +3,8 @@
 - Search Lirik Lagu
 - Search Chord Lagu
 - Random Quotes
+- Random Asmaul Husna
 - Info Gempa
-- Stalk Instagram
 
 
 # Cara Penggunaan
@@ -38,6 +38,15 @@ https://localhost:8080/api/random/quotes
     {"author":"George W.","quotes":"Harapan tak pernah meninggalkan kita, kita yang meninggalkan harapan.","status":200}
 ```
 
+# Random Asmaul Husna
+```
+https://localhost:8080/api/random/asmaulhusna
+```
+# Response 
+```
+    {"author":"George W.","quotes":"Harapan tak pernah meninggalkan kita, kita yang meninggalkan harapan.","status":200}
+```
+
 # Info Gempa
 ```
 https://localhost:8080/api/infogempa
@@ -45,17 +54,6 @@ https://localhost:8080/api/infogempa
 # Response 
 ```
     {"kedalaman":"10 km","koordinat":"5.63 LS - 101.60 BT","lokasi":"Pusat gempa berada di laut 80 km BaratDaya Enggano","magnitude":"6.5","map":"https://ews.bmkg.go.id/tews/data/20210210195227.mmi.jpg","potensi":"Dirasakan (Skala MMI): II-III Enggano, II Kota Bengkulu, II Kepahiang","status":200,"waktu":"10 Feb 2021, 19:52 WIB"}
-```
-
-# Stalk Instagram
-```
-https://localhost:8080/api/ig/stalk?username=ekooju
-```
-# Response 
-```
-{
-    "results": https://static.xx.fbcdn.net/rsrc.php/v3/yt/l/0,cross/sHzueLzk5lu.css?_nc_x=Ij3Wp8lg5Kz
-}
 ```
 
 # Live API
