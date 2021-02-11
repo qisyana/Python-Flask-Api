@@ -1,7 +1,7 @@
 from flask import Flask, request
 from requests import get, post
 from bs4 import BeautifulSoup as bs
-import json, base64, random, html_text
+import json, base64, random, re, html_text
 from urllib.parse import *
 
 app = Flask(__name__)
