@@ -34,20 +34,6 @@ def quotes():
 		'quotes': result['quotes']
 	}
 
-@app.route('/api/random/asmaulhusna', methods=['GET','POST'])
-def quotes():
-	asmaul = json.loads(open('asmaul.json').read())
-	result = random.choice(asmaul)
-	print(result)
-	return {
-		'status': 200,
-		'no': result['index'],
-		'latin': result['latin'],
-                'arabic': result['arabic'],
-                'translate_id': result['translation_id'],
-                'translate_en': result['translation_en']
-	}
-
 @app.route('/api/infogempa', methods=['GET','POST'])
 def infogempa():
 	be = bs(get('https://www.bmkg.go.id/').text, 'html.parser').find('div', class_="col-md-4 md-margin-bottom-10")
