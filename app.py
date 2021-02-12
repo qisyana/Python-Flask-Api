@@ -74,5 +74,19 @@ def chord():
 			'msg': '[!] Masukkan parameter q'
 		}
 
+@app.route('/api/random/asmaulhusna', methods=['GET','POST'])
+def quotes():
+	asmaul = json.loads(open('asmaul.json').read())
+	result = random.choice(asmaul)
+	print(result)
+	return {
+		'status': 200,
+		'no': result['index'],
+		'latin': result['latin'],
+                'arabic': result['arabic'],
+                'translate_id': result['translation_id'],
+                'translate_en': result['translation_en']
+	}
+
 if __name__ == '__main__':
     app.run()
