@@ -39,7 +39,7 @@
 
 # Random Asmaul Husna
 ```
-    {"author":"George W.","quotes":"Harapan tak pernah meninggalkan kita, kita yang meninggalkan harapan.","status":200}
+    {"arabic":"\u0627\u0644\u0652\u062d\u0633\u0650\u064a\u0628\u064f","latin":"Al Hasiib","no":"40","status":200,"translate_en":"The Reckoner","translate_id":"Yang Memiliki Mutlak sifat MahaMembuat Perhitungan"}
 ```
 
 # Info Gempa
