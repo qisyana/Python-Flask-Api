@@ -50,6 +50,8 @@
 # Live API
 * https://python-api-zhirrr.herokuapp.com/
 - Gunakan Parameter Yg Sama Yak :)
+- 100 % Open Source
+- Rate This Repository Ok 🎉
 
 ## 🙏 Big Special Thanks To
 
