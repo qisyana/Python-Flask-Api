@@ -75,7 +75,7 @@ def chord():
 		}
 
 @app.route('/api/random/asmaulhusna', methods=['GET','POST'])
-def quotes():
+def asmaull():
 	asmaul = json.loads(open('asmaul.json').read())
 	result = random.choice(asmaul)
 	print(result)
