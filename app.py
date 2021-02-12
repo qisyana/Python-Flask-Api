@@ -9,7 +9,7 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     a = {
-    'Contoh-Penggunaan':{'search-lirik': 'api/lirik?search=alone', 'random-quotes':'api/random/quotes', 'info-gempa':'api/infogempa', 'random-asmaulhusna':'api/random/asmaulhusna'}
+    'Contoh-Penggunaan':{'search-lirik': 'api/lirik?search=alone', 'search-chord': 'api/chord?q=alone, 'random-quotes':'api/random/quotes', 'info-gempa':'api/infogempa', 'random-asmaulhusna':'api/random/asmaulhusna'}
     }
     return a
 
