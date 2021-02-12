@@ -15,9 +15,9 @@ def home():
 
 @app.route('/api/lirik')
 def lirik():
-    par= request.args.get('search')
+    epep= request.args.get('search')
     from lirik import search
-    a = search(par)
+    a = search(epep)
     b = {
     'results': a.result()
     }
@@ -36,18 +36,18 @@ def quotes():
 
 @app.route('/api/infogempa', methods=['GET','POST'])
 def infogempa():
-	be = bs(get('https://www.bmkg.go.id/').text, 'html.parser').find('div', class_="col-md-4 md-margin-bottom-10")
-	em = be.findAll('li')
-	img = be.find('a')['href']
+	anjay = bs(get('https://www.bmkg.go.id/').text, 'html.parser').find('div', class_="col-md-4 md-margin-bottom-10")
+	hayuk = anjay.findAll('li')
+	gambar = anjay.find('a')['href']
 	return {
 		'status': 200,
-		'map': img,
-		'waktu': em[0].text,
-		'magnitude': em[1].text,
-		'kedalaman': em[2].text,
-		'koordinat': em[3].text,
-		'lokasi': em[4].text,
-		'potensi': em[5].text
+		'map': gambar,
+		'waktu': hayuk[0].text,
+		'magnitude': hayuk[1].text,
+		'kedalaman': hayuk[2].text,
+		'koordinat': hayuk[3].text,
+		'lokasi': hayuk[4].text,
+		'potensi': hayuk[5].text
 	}
 
 @app.route('/api/chord', methods=['GET','POST'])
@@ -66,7 +66,7 @@ def chord():
 			print(e)
 			return {
 				'status': False,
-				'error': '[❗] Maaf chord yang anda cari tidak dapat saya temukan!'
+				'error': '[❗] Maaf chord lagu yang anda cari tidak ditemukan!'
 			}
 	else:
 		return {
@@ -75,7 +75,7 @@ def chord():
 		}
 
 @app.route('/api/random/asmaulhusna', methods=['GET','POST'])
-def asmaull():
+def asmaulhusna():
 	asmaul = json.loads(open('asmaul.json').read())
 	result = random.choice(asmaul)
 	print(result)
