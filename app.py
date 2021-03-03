@@ -88,28 +88,5 @@ def asmaulhusna():
                 'translate_en': result['translation_en']
 	}
 	
-@app.route('/api/kuis/caklontong', methods=['GET','POST'])
-def caklontong():
-	cak = json.loads(open('caklontong.json').read())
-	lontong = random.choice(cak)
-	print(lontong)
-	return {
-		'status': 200,
-		'soal': lontong['result']['soal'],
-		'jawaban': lontong['result']['jawaban'],
-                'deskripsi': lontong['result']['desc']
-	}
-
-@app.route('/api/kuis/family100', methods=['GET','POST'])
-def tebakgambar():
-	family = json.loads(open('family100.json').read())
-	seratus = random.choice(family)
-	print(seratus)
-	return {
-		'status': 200,
-		'soal': seratus['result']['soal'],
-		'jawaban': seratus['result']['jawaban']
-	}
-
 if __name__ == '__main__':
     app.run()
